@@ -2,7 +2,8 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
-import ContactCard from './ContactCard';
+import ContactCard from '../component/ContactCard';
+import GoogleMap from '../component/GoogleMap';
 // import Maps from './Map';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,7 +26,7 @@ export default function ContactUs() {
             <Grid container spacing={3}>
             
                 <Grid item xs={6}> 
-                    <Paper className={classes.paper}> </Paper>
+                    <Paper className={classes.paper}><GoogleMap/> </Paper>
                 </Grid>
                 <Grid item xs={6}>
                     <Paper className={classes.paper}>  <ContactCard/> </Paper>

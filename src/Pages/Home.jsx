@@ -1,18 +1,36 @@
+import { Carousel } from 'react-bootstrap';
 import React from 'react';
-import Carousel  from 'C:/Users/91971/Music/Project/React/mynewapp/node_modules/react-bootstrap/Carousel';
 import img1 from '../img/dog1.jpg'
 import img2 from '../img/dog2.jpg'
 import img3 from '../img/dog3.jpg'
+import ShopByCategories from '../component/ShopByCategories';
+import { Typography } from '@material-ui/core';
+
+
+
+
 
 
 const Home = () => {
-    const imgStyle = {
-       height:"80vh"
-    }
+        return (
+        <div>
+           <Dog/>
+           <br/>
+                <Typography style = {{textAlign:'center'}} variant= 'h3'> What You Need To deliver ?   </Typography>
+           <ShopByCategories/>
+        </div>
+    );
+}
 
+export default Home;
+
+const Dog = () => {
+    const imgStyle = {
+        height:"80vh"
+     }
     return (
         <div>
-            <Carousel>
+             <Carousel>
                 <Carousel.Item interval={1000}>
                     <img style = {imgStyle}
                         className="d-block w-100"
@@ -48,7 +66,5 @@ const Home = () => {
                 </Carousel.Item>
             </Carousel>
         </div>
-    );
+    )
 }
-
-export default Home;

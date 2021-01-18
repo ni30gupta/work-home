@@ -1,11 +1,11 @@
 import React from 'react'
 import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Home from './Pages/Home'
-import ContactUs from './ContactUs'
+import ContactUs from './Pages/ContactUs'
 import Product from './Pages/Product'
 import TrackOrder from './Pages/TrackOrder'
 import BulkInquiry from './Pages/BulkInquiry'
-import Navbar from './Navbar'
+import Navbar from './component/Navbar'
 
 
 export default function App() {
@@ -15,7 +15,7 @@ export default function App() {
       <Router>
       <Navbar/>   
       <Switch>
-        <Route path = "/" exact  component = {Home}></Route>
+        <Route path = "/" exact   component = {Home}></Route>
         <Route path = "/contactus" component = {ContactUs}></Route>
         <Route path = "/product" component = {Product}></Route>
         <Route path = "/trackorder" component = {TrackOrder}></Route>
