@@ -5,14 +5,15 @@ var mysql = require('mysql')
 var con = mysql.createPool({
     host: "localhost",
     user: "root",
-    password:"123456",
-    database: "database_packpr"
+    password:"password",
+    database: "database_packpr",
+    insecureAuth : true
 
 })
 
 
-app.get('/', (req, res) => {
-    const sqlInsert= "INSER INTO userData(email, password) VALUES ('nitish', 'ngupta@gmail.com');"
+app.post('/api/submit', (req, res) => {
+    const sqlInsert= "INSERT INTO user_data( id,email, password) VALUES ('151' , 'nitish', 'ngupta@gmail.com');"
 
     con.query(sqlInsert, (err, result)=> {
         console.log(err)
