@@ -11,8 +11,9 @@ export default function ContactCard() {
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
 
-  const handleSubmit = () => {
-    Axios.post('http://localhost:3030/api/submit')
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    Axios.post('http://localhost:3030/api/submit',{userName:name,email:email,mobile:mobile,password:password})
   }
 
 
